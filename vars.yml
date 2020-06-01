@@ -1,12 +1,10 @@
 consul_iface: "enp0s8"
 consul_client_address: "{{ consul_bind_address }}"
 
+# Pay attention on this useful hack - it gathers ['ansible_enp0s8']['ipv4']['address'] fact
 patroni_consul_host: "{{ hostvars[inventory_hostname]['ansible_'+ consul_iface | replace('-', '_')]['ipv4']['address'] }}"
 patroni_dcs: consul
 patroni_dcs_exists: true
-#patroni_pip_packages:
-#  - { name: "setuptools",                 state: "latest",  umask: "0022", executable: "pip" }
-#  - { name: "patroni[{{ patroni_dcs }}]", state: "present", umask: "0022", executable: "pip" }
 
 patroni_postgresql_pg_hba:
 #patroni_bootstrap_pg_hba:
