@@ -45,6 +45,12 @@ vim inventory.ini
 ```
 
 ### Target hosts 1-3
+#### Part 1
+First of all add ssh pubkey from deployhost to target host's authorized\_keys file
+Next, configure hostnames and /etc/hosts resolv
+Finally, configure network interfaces. 
+[Example of configuration](prepare_hosts.md)
+#### Part 2
 Disable firewalld due to consul intercommunications
 ```bash
 systemctl stop firewalld
