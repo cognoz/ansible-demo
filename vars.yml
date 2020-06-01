@@ -7,7 +7,6 @@ patroni_dcs: consul
 patroni_dcs_exists: true
 
 patroni_postgresql_pg_hba:
-#patroni_bootstrap_pg_hba:
 - { type: "local", database: "postgres", user: "postgres" , method: "trust" } 
 - { type: "host", database: "all", user: "all", address: "0.0.0.0/0", method: "md5" }
 - { type: "host", database: "replication", user: "{{ patroni_replication_username }}", address: "0.0.0.0/0", method: "md5" }
