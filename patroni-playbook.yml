@@ -1,0 +1,4 @@
+- hosts: postgresql-servers
+  become: yes
+  roles:
+    - kostiantyn-nemchenko.patroni

@@ -1,0 +1,4 @@
+- name: Assemble Consul cluster
+  hosts: consul_instances
+  roles:
+    - brianshumate.consul
