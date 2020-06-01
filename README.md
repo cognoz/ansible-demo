@@ -62,7 +62,7 @@ Don't forget to add deployhost's public ssh-rsa key to /root/.ssh/authorized\_ke
 
 ### Install consul
 ```bash
-ansible-playbook -vv -i inventory.ini consul-playbook.yml 
+ansible-playbook -vv -i inventory.ini -e @vars.yml consul-playbook.yml 
 ```
 ### Check consul
 ```bash
@@ -75,7 +75,7 @@ consul members -http-addr=http://TARGETNODE1-IP:8500
 
 ### Install patroni
 ```bash
-ansible-playbook -vv -i inventory.ini patroni-playbook.yml
+ansible-playbook -vv -i inventory.ini -e @vars.yml patroni-playbook.yml
 ```
 
 ### Check Patroni
