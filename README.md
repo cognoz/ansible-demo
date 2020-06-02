@@ -71,6 +71,11 @@ http://TARGETNODE1-IP:8500/ui/dc1/nodes
 
 #Or in CLI on any node 
 consul members -http-addr=http://TARGETNODE1-IP:8500
+
+#if you forgot to disable firewalld you'll see only 1 member in list
+#In that case just stop/disable firewalld and restart consul everywhere
+#via command
+systemctl restart consul
 ```
 
 ### Install patroni
