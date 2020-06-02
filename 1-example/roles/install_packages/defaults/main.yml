@@ -1,0 +1,4 @@
+pkgs:
+- vim
+- git
+pkg_state: "absent"

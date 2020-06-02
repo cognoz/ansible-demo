@@ -1,0 +1,13 @@
+---
+- name: Pkg install playbook
+  hosts: dc1
+  roles:
+    - { role: install_packages }
+
+- name: Print variable
+  hosts: dc1,dc2
+  tasks:
+    - name: Print var
+      debug:
+        msg: "{{ pkgs }}"
+#        msg: "{{ hostvars['node1']['pkgs'] }} "

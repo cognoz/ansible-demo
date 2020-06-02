@@ -1,0 +1,7 @@
+---
+- name: Install vim and other stuff
+  yum:
+    name: "{{ item }}"
+    state: "{{ pkg_state }}"
+  with_items:
+  - "{{ pkgs }}"
